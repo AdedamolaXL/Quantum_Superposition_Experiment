@@ -31,23 +31,51 @@ This right here is the source of our theses, that and a lack of access to quantu
 
 ### METHODOLOGY
 
-Materials:
+*Materials:*
+ 
+ * One die with six sides
+ * Flat surface to roll the die on
+ * Camera to record the experiment 
+ * Noteboo to record the results
 
-    One die with six sides
-    Flat surface to roll the die on
-    Camera to record the experiment (optional)
-    Notebook or data sheet to record the results
+*Procedure:*
 
-Procedure:
+ * Choose a flat surface to roll the die on. Ensure that the surface is level and free from any potential sources of disturbance.
+ * Prepare the die by ensuring that it is clean and free from any obstructions that may prevent it from rolling smoothly.
+ * Begin the experiment by setting a timer to a fixed duration.
+ * At regular intervals, in this case every 10 seconds, roll the die onto the flat surface. Record the result of each roll on a data sheet.
+ * Repeat step 4, to conduct more rolls
 
-    Choose a flat surface to roll the die on. Ensure that the surface is level and free from any potential sources of disturbance.
+*Expected scenario:*
 
-    Prepare the die by ensuring that it is clean and free from any obstructions that may prevent it from rolling smoothly.
+For the purpose of this experiment, we are recording the *front face(s)* of the die, which the camera allows us to do due to the 180 degree view. In our experiment, a roll has two possible initial outcomes; one in which *one face* is recorded and the other in which *two faces* are recorded.
 
-    Begin the experiment by setting a timer to a fixed duration, such as 60 seconds.
 
-    At regular intervals, such as every 10 seconds, roll the die onto the flat surface. Record the result of each roll on a data sheet.
+*Constructing an Hilbert Space*
 
-    Repeat step 4 for a fixed number of rolls, such as six rolls.
+For the case where the camera captures only one face of the die, we can define a 6-dimensional complex vector space where each dimension corresponds to one of the possible outcomes, i.e., the faces of the die numbered 1 to 6. Let's denote the basis vectors for this space as |1⟩, |2⟩, |3⟩, |4⟩, |5⟩, and |6⟩, respectively. Then any state in this space can be represented as a linear combination of these basis vectors, such as:
 
-    After completing the experiment, analyze the data to determine the probability of each side of the die landing face-up. You can calculate the experimental probabilities by dividing the number of times each side appeared by the total number of rolls.
+|ψ⟩ = a1|1⟩ + a2|2⟩ + a3|3⟩ + a4|4⟩ + a5|5⟩ + a6|6⟩,
+
+where a1, a2, a3, a4, a5, and a6 are complex coefficients.
+
+For the case where the camera captures two faces of the die, we can define a 36-dimensional complex vector space where each dimension corresponds to a pair of faces of the die. We can order the pairs lexicographically so that the basis vectors are ordered as:
+
+|1,1⟩, |1,2⟩, |1,3⟩, |1,4⟩, |1,5⟩, |1,6⟩, |2,1⟩, |2,2⟩, ..., |6,5⟩, |6,6⟩.
+
+Then any state in this space can be represented as a linear combination of these basis vectors, such as:
+
+|ψ⟩ = a11|1,1⟩ + a12|1,2⟩ + ... + a66|6,6⟩,
+
+where a11, a12, ..., a66 are complex coefficients.
+
+This construction satisfies the conditions for a Hilbert space, as it is a complex vector space with an inner product that satisfies the properties of linearity, conjugate symmetry, and positive definiteness.
+
+M1 = [1 0 0 0 0 0
+      0 0 0 0 0 0  
+      0 0 0 0 0 0
+      0 0 0 0 0 0     
+      0 0 0 0 0 0     
+      0 0 0 0 0 0]]
+
+
