@@ -31,3 +31,23 @@ This right here is the source of our theses, that and a lack of access to quantu
 
 ### METHODOLOGY
 
+Materials:
+
+    One die with six sides
+    Flat surface to roll the die on
+    Camera to record the experiment (optional)
+    Notebook or data sheet to record the results
+
+Procedure:
+
+    Choose a flat surface to roll the die on. Ensure that the surface is level and free from any potential sources of disturbance.
+
+    Prepare the die by ensuring that it is clean and free from any obstructions that may prevent it from rolling smoothly.
+
+    Begin the experiment by setting a timer to a fixed duration, such as 60 seconds.
+
+    At regular intervals, such as every 10 seconds, roll the die onto the flat surface. Record the result of each roll on a data sheet.
+
+    Repeat step 4 for a fixed number of rolls, such as six rolls.
+
+    After completing the experiment, analyze the data to determine the probability of each side of the die landing face-up. You can calculate the experimental probabilities by dividing the number of times each side appeared by the total number of rolls.
