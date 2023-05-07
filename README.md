@@ -53,29 +53,93 @@ For the purpose of this experiment, we are recording the *front face(s)* of the 
 
 *Constructing an Hilbert Space*
 
-For the case where the camera captures only one face of the die, we can define a 6-dimensional complex vector space where each dimension corresponds to one of the possible outcomes, i.e., the faces of the die numbered 1 to 6. Let's denote the basis vectors for this space as |1⟩, |2⟩, |3⟩, |4⟩, |5⟩, and |6⟩, respectively. Then any state in this space can be represented as a linear combination of these basis vectors, such as:
+Let's start with the 6-dimensional complex vector space for the case where the camera captures only one face of the die. We can denote the six possible outcomes as:
 
-|ψ⟩ = a1|1⟩ + a2|2⟩ + a3|3⟩ + a4|4⟩ + a5|5⟩ + a6|6⟩,
+|1>, |2>, |3>, |4>, |5>, |6>
 
-where a1, a2, a3, a4, a5, and a6 are complex coefficients.
+and the corresponding basis vectors in the Hilbert space as:
 
-For the case where the camera captures two faces of the die, we can define a 36-dimensional complex vector space where each dimension corresponds to a pair of faces of the die. We can order the pairs lexicographically so that the basis vectors are ordered as:
+e_1 = [1, 0, 0, 0, 0, 0]
+e_2 = [0, 1, 0, 0, 0, 0]
+e_3 = [0, 0, 1, 0, 0, 0]
+e_4 = [0, 0, 0, 1, 0, 0]
+e_5 = [0, 0, 0, 0, 1, 0]
+e_6 = [0, 0, 0, 0, 0, 1]
 
-|1,1⟩, |1,2⟩, |1,3⟩, |1,4⟩, |1,5⟩, |1,6⟩, |2,1⟩, |2,2⟩, ..., |6,5⟩, |6,6⟩.
+The complex vectors in this 6-dimensional Hilbert space can be represented as linear combinations of these basis vectors.
 
-Then any state in this space can be represented as a linear combination of these basis vectors, such as:
+Now let's move on to the 36-dimensional complex vector space for the case where the camera captures two faces of the die. We can denote the 36 possible outcomes as:
 
-|ψ⟩ = a11|1,1⟩ + a12|1,2⟩ + ... + a66|6,6⟩,
+|1,1>, |1,2>, ..., |1,6>, |2,1>, |2,2>, ..., |6,6>
 
-where a11, a12, ..., a66 are complex coefficients.
+Here, the state |i,j⟩ represents the outcome where the first face of the die shows i and the second face of the die shows j. This gives us a total of 36 basis states.
 
-This construction satisfies the conditions for a Hilbert space, as it is a complex vector space with an inner product that satisfies the properties of linearity, conjugate symmetry, and positive definiteness.
+The corresponding basis vectors in the Hilbert space can be denoted as:
 
-M1 = [1 0 0 0 0 0
-      0 0 0 0 0 0  
-      0 0 0 0 0 0
-      0 0 0 0 0 0     
-      0 0 0 0 0 0     
-      0 0 0 0 0 0]]
+e_1 = [1, 0, 0, ..., 0, 0]
+e_2 = [0, 1, 0, ..., 0, 0]
+...
+e_36 = [0, 0, 0, ..., 0, 1]
+
+The complex vectors in this 36-dimensional Hilbert space can be represented as linear combinations of these basis vectors.
+      
+To make predictions about the outcomes of measurements for this operator, we need to apply it to a state vector representing the quantum state of the die.
+
+Let's say we start with an initial state vector of:
+
+psi = [0, 0, 0, 0, 0, 1]
+
+which represents the state where the die is in state 6 (the last entry in the vector) and no measurement has been made yet.
+
+*Calculating the probability of a particular outcome*
+
+ A. 
+The measurement operator for the outcome of rolling a die and the camera capturing only one face can be represented by the matrix:
+
+M = [[1, 0, 0, 0, 0, 0],
+     [0, 1, 0, 0, 0, 0],
+     [0, 0, 1, 0, 0, 0],
+     [0, 0, 0, 1, 0, 0],
+     [0, 0, 0, 0, 1, 0],
+     [0, 0, 0, 0, 0, 1]]
+     
+To make predictions about the outcomes of measurements, we need to calculate the probability of each outcome. Let's assume that the die is initially in the state:
+
+|psi> = (1/sqrt(6)) * [1, 1, 1, 1, 1, 1]
+
+This is a uniform distribution over all possible outcomes, since the probability of each outcome is the same.
+
+To calculate the probability of obtaining a certain outcome, we can use the formula:
+p_i = |<e_i|psi>|^2
+
+where e_i is the ith basis vector and |<e_i|psi>|^2 is the squared magnitude of the inner product between e_i and |psi>.
+
+Using this formula, we can calculate the probability of obtaining each outcome:
+p_1 = |<e_1|psi>|^2 = |(1/sqrt(6)) * [1, 0, 0, 0, 0, 0]|^2 = 1/6
+p_2 = |<e_2|psi>|^2 = |(1/sqrt(6)) * [0, 1, 0, 0, 0, 0]|^2 = 1/6
+p_3 = |<e_3|psi>|^2 = |(1/sqrt(6)) * [0, 0, 1, 0, 0, 0]|^2 = 1/6
+p_4 = |<e_4|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 1, 0, 0]|^2 = 1/6
+p_5 = |<e_5|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 1, 0]|^2 = 1/6
+p_6 = |<e_6|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 0, 1]|^2 = 1/6
+
+So the probability of obtaining each outcome is 1/6, which is expected since the die is initially in a uniform distribution over all possible outcomes.
 
 
+To make predictions about the outcomes of measurements using the measurement operator for the 36-dimensional Hilbert space, we need to apply the operator to the quantum state vector representing the initial state of the system, and then calculate the probabilities of obtaining each possible outcome.
+
+Suppose we have an initial quantum state vector represented as:
+
+|psi> = a_1 * e_1 + a_2 * e_2 + ... + a_36 * e_36
+
+where a_i represents the probability amplitude of the system being in the i-th basis state. We can then apply the measurement operator to this state vector as follows:
+
+First, we construct a matrix e whose columns are the basis vectors -> e = ((e_1, e_2, ..., e_36))
+Next, we use the outer product to calculate the measurement operator M. This is done by multiplying e with its conjugate transpose -> M = e @ e.conj().T
+Finally, to calculate the probabilities of each outcome, we need to take the inner product of the state vector |psi> with the measurement operator M, and then multiply it by its conjugate transpose. This can be expressed as -> p = (M @ |psi>) * (M @ |psi>).conj()
+Here, @ denotes matrix multiplication, * denotes element-wise multiplication, and .conj() denotes complex conjugation. 
+
+The probabilities p_i represent the probability of measuring the i-th basis state of the system. Note that the probabilities must satisfy the normalization condition:
+
+sum(p) = |a_1|^2 + |a_2|^2 + ... + |a_36|^2 = 1
+
+which ensures that the total probability of obtaining any outcome is equal to 1.
