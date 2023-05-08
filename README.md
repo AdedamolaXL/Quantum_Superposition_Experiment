@@ -46,100 +46,51 @@ This right here is the source of our theses, that and a lack of access to quantu
  * At regular intervals, in this case every 10 seconds, roll the die onto the flat surface. Record the result of each roll on a data sheet.
  * Repeat step 4, to conduct more rolls
 
-*Expected scenario:*
+*Our experimental scenario:*
 
-For the purpose of this experiment, we are recording the *front face(s)* of the die, which the camera allows us to do due to the 180 degree view. In our experiment, a roll has two possible initial outcomes; one in which *one face* is recorded and the other in which *two faces* are recorded.
+For the purpose of this experiment, we are recording the *front face(s)* of the die, which the camera allows us to do due to the 180 degree view. In our experiment, a roll has two possible initial outcomes; one in which *one face* is recorded and the other in which *two faces* are recorded. This scenario will help us to study the phenomenon of quantum superposition where our die is locked in two states.
 
 
 *Constructing an Hilbert Space*
 
-Let's start with the 6-dimensional complex vector space for the case where the camera captures only one face of the die. We can denote the six possible outcomes as:
+In this case, we would represent the single face outcome as the state |1> and the double face outcome as the state |2>. 
 
-|1>, |2>, |3>, |4>, |5>, |6>
+The initial state of the system would be a superposition of these two states:
 
-and the corresponding basis vectors in the Hilbert space as:
+* |psi> = (1/sqrt(2)) * [|1> + |2>] ...... (i)
 
-e_1 = [1, 0, 0, 0, 0, 0]
-e_2 = [0, 1, 0, 0, 0, 0]
-e_3 = [0, 0, 1, 0, 0, 0]
-e_4 = [0, 0, 0, 1, 0, 0]
-e_5 = [0, 0, 0, 0, 1, 0]
-e_6 = [0, 0, 0, 0, 0, 1]
+Our measurement operator would be a 2x2 matrix, since there are only 2 possible outcomes. The matrix would be:
 
-The complex vectors in this 6-dimensional Hilbert space can be represented as linear combinations of these basis vectors.
+ * M = [[1, 0], [0, 1]] ...... (ii)
 
-Now let's move on to the 36-dimensional complex vector space for the case where the camera captures two faces of the die. We can denote the 36 possible outcomes as:
+To calculate the probability of obtaining each outcome, we can use the formula:
 
-|1,1>, |1,2>, ..., |1,6>, |2,1>, |2,2>, ..., |6,6>
+ * p_i = |<e_i|psi>|^2 ...... (iii)
 
-Here, the state |i,j⟩ represents the outcome where the first face of the die shows i and the second face of the die shows j. This gives us a total of 36 basis states.
+where e_i is the ith basis vector 
 
-The corresponding basis vectors in the Hilbert space can be denoted as:
+and |<e_i|psi>|^2 is the squared magnitude of the inner product between e_i and |psi>.
 
-e_1 = [1, 0, 0, ..., 0, 0]
-e_2 = [0, 1, 0, ..., 0, 0]
-...
-e_36 = [0, 0, 0, ..., 0, 1]
+For this 2-state system, the basis vectors are |1> and |2>. So we can calculate the probabilities as:
 
-The complex vectors in this 36-dimensional Hilbert space can be represented as linear combinations of these basis vectors.
-      
-To make predictions about the outcomes of measurements for this operator, we need to apply it to a state vector representing the quantum state of the die.
+ * p_1 = |<1|psi>|^2 = |(1/sqrt(2)) * <1|1> + <1|2>>|^2 = 1/2 ...... (i)
+ * p_2 = |<2|psi>|^2 = |(1/sqrt(2)) * <2|1> + <2|2>>|^2 = 1/2 ...... (ii)
 
-Let's say we start with an initial state vector of:
+The probabilities of obtaining a single face or a double face are both 1/2, which is expected since the initial state is a superposition of these two states with equal weight.
 
-psi = [0, 0, 0, 0, 0, 1]
+We can think of the 6 faces of the die as corresponding to 6 possible spin directions in a quantum system. In this case, the spin of the die would be analogous to the spin of a quantum particle, and the measurement of the face of the die would be analogous to the measurement of the spin of a quantum particle along a certain direction.
 
-which represents the state where the die is in state 6 (the last entry in the vector) and no measurement has been made yet.
+We can represent the spin states using the Dirac notation, where |0⟩ represents spin up and |1⟩ represents spin down. Then, we can assign each face of the die to a corresponding spin state:
 
-*Calculating the probability of a particular outcome*
+    Face 1: |0⟩
+    Face 2: |1⟩
+    Face 3: |+⟩ = (|0⟩ + |1⟩)/sqrt(2)
+    Face 4: |−⟩ = (|0⟩ − |1⟩)/sqrt(2)
+    Face 5: |i⟩ = (|0⟩ + i|1⟩)/sqrt(2)
+    Face 6: |-i⟩ = (|0⟩ − i|1⟩)/sqrt(2)
 
- A. 
-The measurement operator for the outcome of rolling a die and the camera capturing only one face can be represented by the matrix:
+Here, |+⟩ and |−⟩ correspond to the spin states that are superpositions of spin up and spin down, while |i⟩ and |-i⟩ correspond to the spin states that are superpositions of spin up and spin down with an imaginary coefficient.
 
-M = [[1, 0, 0, 0, 0, 0],
-     [0, 1, 0, 0, 0, 0],
-     [0, 0, 1, 0, 0, 0],
-     [0, 0, 0, 1, 0, 0],
-     [0, 0, 0, 0, 1, 0],
-     [0, 0, 0, 0, 0, 1]]
-     
-To make predictions about the outcomes of measurements, we need to calculate the probability of each outcome. Let's assume that the die is initially in the state:
+We can then use these spin states to define our quantum system and perform measurements on it. For example, we could prepare the system in a superposition of spin up and spin down, and then measure the spin along a certain direction to obtain a probabilistic outcome. The probabilities of obtaining each outcome would depend on the initial state of the system and the measurement direction.
 
-|psi> = (1/sqrt(6)) * [1, 1, 1, 1, 1, 1]
-
-This is a uniform distribution over all possible outcomes, since the probability of each outcome is the same.
-
-To calculate the probability of obtaining a certain outcome, we can use the formula:
-p_i = |<e_i|psi>|^2
-
-where e_i is the ith basis vector and |<e_i|psi>|^2 is the squared magnitude of the inner product between e_i and |psi>.
-
-Using this formula, we can calculate the probability of obtaining each outcome:
- * p_1 = |<e_1|psi>|^2 = |(1/sqrt(6)) * [1, 0, 0, 0, 0, 0]|^2 = 1/6
- * p_2 = |<e_2|psi>|^2 = |(1/sqrt(6)) * [0, 1, 0, 0, 0, 0]|^2 = 1/6
- * p_3 = |<e_3|psi>|^2 = |(1/sqrt(6)) * [0, 0, 1, 0, 0, 0]|^2 = 1/6
- * p_4 = |<e_4|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 1, 0, 0]|^2 = 1/6
- * p_5 = |<e_5|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 1, 0]|^2 = 1/6
- * p_6 = |<e_6|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 0, 1]|^2 = 1/6
-
-So the probability of obtaining each outcome is 1/6, which is expected since the die is initially in a uniform distribution over all possible outcomes.
-
-
-To make predictions about the outcomes of measurements using the measurement operator for the 36-dimensional Hilbert space, we need to apply the operator to the quantum state vector representing the initial state of the system, and then calculate the probabilities of obtaining each possible outcome.
-
-Suppose we have an initial quantum state vector represented as:
-
-|psi> = a_1 * e_1 + a_2 * e_2 + ... + a_36 * e_36
-
-where a_i represents the probability amplitude of the system being in the i-th basis state. We can then apply the measurement operator to this state vector as follows:
-
-First, we construct a matrix e whose columns are the basis vectors -> e = ((e_1, e_2, ..., e_36))
-Next, we use the outer product to calculate the measurement operator M. This is done by multiplying e with its conjugate transpose -> M = e @ e.conj().T
-Finally, to calculate the probabilities of each outcome, we need to take the inner product of the state vector |psi> with the measurement operator M, and then multiply it by its conjugate transpose. This can be expressed as -> p = (M @ |psi>) * (M @ |psi>).conj()
-Here, @ denotes matrix multiplication, * denotes element-wise multiplication, and .conj() denotes complex conjugation. 
-
-The probabilities p_i represent the probability of measuring the i-th basis state of the system. Note that the probabilities must satisfy the normalization condition:
-
-sum(p) = |a_1|^2 + |a_2|^2 + ... + |a_36|^2 = 1
-
-which ensures that the total probability of obtaining any outcome is equal to 1.
+By using the faces of the die as spin states, we can connect the concepts of classical probability and quantum mechanics, and explore the similarities and differences between them.
