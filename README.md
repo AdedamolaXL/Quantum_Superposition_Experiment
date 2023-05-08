@@ -115,12 +115,12 @@ p_i = |<e_i|psi>|^2
 where e_i is the ith basis vector and |<e_i|psi>|^2 is the squared magnitude of the inner product between e_i and |psi>.
 
 Using this formula, we can calculate the probability of obtaining each outcome:
-p_1 = |<e_1|psi>|^2 = |(1/sqrt(6)) * [1, 0, 0, 0, 0, 0]|^2 = 1/6
-p_2 = |<e_2|psi>|^2 = |(1/sqrt(6)) * [0, 1, 0, 0, 0, 0]|^2 = 1/6
-p_3 = |<e_3|psi>|^2 = |(1/sqrt(6)) * [0, 0, 1, 0, 0, 0]|^2 = 1/6
-p_4 = |<e_4|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 1, 0, 0]|^2 = 1/6
-p_5 = |<e_5|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 1, 0]|^2 = 1/6
-p_6 = |<e_6|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 0, 1]|^2 = 1/6
+ * p_1 = |<e_1|psi>|^2 = |(1/sqrt(6)) * [1, 0, 0, 0, 0, 0]|^2 = 1/6
+ * p_2 = |<e_2|psi>|^2 = |(1/sqrt(6)) * [0, 1, 0, 0, 0, 0]|^2 = 1/6
+ * p_3 = |<e_3|psi>|^2 = |(1/sqrt(6)) * [0, 0, 1, 0, 0, 0]|^2 = 1/6
+ * p_4 = |<e_4|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 1, 0, 0]|^2 = 1/6
+ * p_5 = |<e_5|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 1, 0]|^2 = 1/6
+ * p_6 = |<e_6|psi>|^2 = |(1/sqrt(6)) * [0, 0, 0, 0, 0, 1]|^2 = 1/6
 
 So the probability of obtaining each outcome is 1/6, which is expected since the die is initially in a uniform distribution over all possible outcomes.
 
