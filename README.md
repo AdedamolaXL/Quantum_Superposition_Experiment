@@ -96,23 +96,53 @@ We can then use these spin states to define our quantum system and perform measu
 By using the faces of the die as spin states, we can connect the concepts of classical probability and quantum mechanics, and explore the similarities and differences between them.
 
 ### RESULTS AND DISCUSSION
-To analyze the number on the die when in double face state, I would need to know the following information:
 
-    How many times was the die observed in the double face state? = 123
-    What are the possible numbers that can appear on the two faces when in double face state? = 12
-    How many times did each of the possible number combinations appear? =
+    total count of single faces: 207
+
+    number of possible outcomes that can appear on a single face: 6
+    count for each side of the single face observed:
+    (1) = 34
+    (2) = 40
+    (3) = 39
+    (4) = 29
+    (5) = 29
+    (6) = 38
+
+    total count of double faces: 153
+    number of possible outcomes that can appear on a double faces: 12
+    count for the possible combination that appeared:
     (1,2) = 13
-    (1,3) = 20
-    (1,4) = 11
-    (1,5) = 7
-    (2,3) = 7
-    (2,4) = 11
-    (2,6) = 9
+    (1,3) = 21
+    (1,4) = 15
+    (1,5) = 11
+    (2,3) = 9
+    (2,4) = 12
+    (2,6) = 10
     (3,5) = 3
-    (3,6) = 12
-    (4,5) = 10
-    (4,6) = 5
-    (5,6) = 15
+    (3,6) = 15
+    (4,5) = 14
+    (4,6) = 9
+    (5,6) = 21
+    
+Calculating the probabilities of each outcome for a single face using the formula P(i) = count(i)/total count of single faces:
+
+    P(1) = 34/207 ≈ 0.1643
+    P(2) = 40/207 ≈ 0.1932
+    P(3) = 39/207 ≈ 0.1884
+    P(4) = 29/207 ≈ 0.1401
+    P(5) = 29/207 ≈ 0.1401
+    P(6) = 38/207 ≈ 0.1836
+    
+We can use this P(x) value to construct the diagonal matrix D:
+
+    | 0.1643   0        0        0        0        0     |
+    | 0        0.1932   0        0        0        0     |
+    | 0        0        0.1884   0        0        0     |
+    | 0        0        0        0.1401   0        0     |
+    | 0        0        0        0        0.1401   0     |
+    | 0        0        0        0        0        0.1836|
+
+
     
 P(outcome) = (number of times outcome occurred) / (total number of trials)
 
