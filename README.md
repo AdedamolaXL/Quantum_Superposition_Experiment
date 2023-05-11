@@ -73,8 +73,8 @@ and |<e_i|psi>|^2 is the squared magnitude of the inner product between e_i and 
 
 For this 2-state system, the basis vectors are |1> and |2>. So we can calculate the probabilities as:
 
- * p_1 = |<1|psi>|^2 = |(1/sqrt(2)) * <1|1> + <1|2>>|^2 = 1/2 ...... (i)
- * p_2 = |<2|psi>|^2 = |(1/sqrt(2)) * <2|1> + <2|2>>|^2 = 1/2 ...... (ii)
+ * p_1 = |<1|psi>|^2 = |(1/sqrt(2)) * <1|1> + <1|2>>|^2 = 1/2 ...... (iv)
+ * p_2 = |<2|psi>|^2 = |(1/sqrt(2)) * <2|1> + <2|2>>|^2 = 1/2 ...... (v)
 
 The probabilities of obtaining a single face or a double face are both 1/2, which is expected since the initial state is a superposition of these two states with equal weight.
 
@@ -109,6 +109,25 @@ By using the faces of the die as spin states, we can connect the concepts of cla
       (5) = 29
       (6) = 38
 
+Calculating the probabilities of each outcome for a single face using the formula P(i) = count(i)/total count of single faces:
+
+    P(1) = 34/207 ≈ 0.1643
+    P(2) = 40/207 ≈ 0.1932
+    P(3) = 39/207 ≈ 0.1884
+    P(4) = 29/207 ≈ 0.1401
+    P(5) = 29/207 ≈ 0.1401
+    P(6) = 38/207 ≈ 0.1836
+    
+We can use this P(x) value to construct the diagonal matrix D:
+
+    [ 0.1643   0        0        0        0        0     ]
+    [ 0        0.1932   0        0        0        0     ]
+    [ 0        0        0.1884   0        0        0     ]
+    [ 0        0        0        0.1401   0        0     ]
+    [ 0        0        0        0        0.1401   0     ]
+    [ 0        0        0        0        0        0.1836]
+
+
 * total count of double faces: 153
 * number of possible outcomes that can appear on a double faces: 12
 * count for the possible combination that appeared:
@@ -126,23 +145,44 @@ By using the faces of the die as spin states, we can connect the concepts of cla
       (4,6) = 9
       (5,6) = 21
     
-Calculating the probabilities of each outcome for a single face using the formula P(i) = count(i)/total count of single faces:
+We can use this P(x) value to construct the diagonal matrix M:
 
-    P(1) = 34/207 ≈ 0.1643
-    P(2) = 40/207 ≈ 0.1932
-    P(3) = 39/207 ≈ 0.1884
-    P(4) = 29/207 ≈ 0.1401
-    P(5) = 29/207 ≈ 0.1401
-    P(6) = 38/207 ≈ 0.1836
-    
-We can use this P(x) value to construct the diagonal matrix D:
-
-    | 0.1643   0        0        0        0        0     |
-    | 0        0.1932   0        0        0        0     |
-    | 0        0        0.1884   0        0        0     |
-    | 0        0        0        0.1401   0        0     |
-    | 0        0        0        0        0.1401   0     |
-    | 0        0        0        0        0        0.1836|
+    [ 0        0.08497  0.13725  0.09804  0.07190  0        0.06536  0        0.09804  0.05882  0        0.13725 ]
+    [ 0.08497  0        0.05882  0.07843  0        0.06536  0        0        0        0.09150  0.13725  0       ]
+    [ 0.13725  0.05882  0        0        0.01961  0        0        0.09804  0.09804  0        0.13725  0       ]
+    [ 0.09804  0.07843  0        0        0        0.09150  0        0.05882  0.05882  0        0        0       ]
+    [ 0.07190  0        0.01961  0        0        0        0.07843  0.09804  0        0.09150  0        0.13725 ]
+    [ 0        0.06536  0        0.09150  0        0        0.09804  0.05882  0.05882  0.13725  0        0       ]
+    [ 0.06536  0        0        0        0.07843  0.09804  0        0.13725  0        0        0.01961  0       ]
+    | 0        0        0.09804  0.05882  0.09804  0.05882  0.13725  0        0        0        0        0       ]
+    [ 0.09804  0        0.09804  0.05882  0        0.05882  0        0        0        0.01961  0.13725  0       ]
+    [ 0.05882  0.09150  0        0        0.09150  0.13725  0        0        0.01961  0        0        0       ]
+    [ 0        0.13725  0.13725  0        0        0        0.01961  0        0.13725  0        0        0       ]
+    [ 0.13725  0        0        0        0.13725  0        0        0        0        0        0        0       ]
 
 
-    
+Next, we need to demonstrate that the measurement operator for the double face outcome is a linear combination of the measurement operator for the single face outcome.
+
+The Kronecker product of a matrix D with a matrix M is denoted by D ⊗ M, and is defined as follows:
+
+* (D ⊗ M)ij = Dij * M ......(vi)
+
+The result of the kron product for the quantum superposition of single and double faces from earlier:
+        
+    [0          0.01396057 0.02255018     0          0          0         ]
+    [0.01396057 0          0.00966413     0          0          0         ]
+    [0.02255018 0.00966413 0              0          0          0         ]
+    [0          0          0              0          0          0         ]
+    [0          0          0              0          0          0         ]
+    [0          0          0              0          0          0         ]
+
+The resulting matrix represents the combined state of the quantum system, which is a superposition of the single and double face outcomes. Each element in the matrix corresponds to the probability amplitude of a particular basis state. 
+
+To obtain the actual probabilities, you need to take the absolute value squared of each amplitude:
+
+    [0          0.00019489 0.00050851     0          0          0         ]
+    [0.00019489 0          0.00966413     0          0          0         ]
+    [0.00050851 0.00009339 0              0          0          0         ]
+    [0          0          0              0          0          0         ]
+    [0          0          0              0          0          0         ]
+    [0          0          0              0          0          0         ]
