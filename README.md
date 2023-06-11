@@ -22,7 +22,7 @@ Let's begin by noting that a die, when rolled, is a single entity that we can un
 
 The reason for this is that the primary cause of unpredictability in the experiment is not due to our lack of knowledge about the die's initial state, which we can assume to be completely known. Instead, it is due to the specific interaction between the die and the hand that throws it, as well as between the die and the surface on which it rolls before coming to rest with a final face showing. In other words, if we were to talk about hidden variables, they would have to be associated with the rolling experiment itself, rather than the initial state of the die
 
-Thus the e very process of measurement (observation) creates the property which is measured, i.e., it is the very measurement that actualizes the property which, prior to the measurement, was only existing in potential terms {the potential terms here beig the 6 faces of the die). 
+Thus the very process of measurement (observation) creates the property which is measured, i.e., it is the very measurement that actualizes the property which, prior to the measurement, was only existing in potential terms {the potential terms here being the 6 faces of the die). 
 
 It's important to recognize that the actualization of potential elements of reality is a characteristic feature of quantum systems, and this leads to non-classical properties that can create interference effects. This suggests that many of the "strange" aspects of quantum physics are actually present in the examination of conventional examples used to demonstrate classical probability calculations since the origin of probability theory. We only need to view these examples as physical experiments assessing particular features or measuring specific observables.
 
@@ -49,6 +49,8 @@ This right here is the source of our theses, that and a lack of access to quantu
 *Our experimental scenario:*
 
 For the purpose of this experiment, we are recording the *front face(s)* of the die, which the camera allows us to do due to the 180 degree view. In our experiment, a roll has two possible initial outcomes; one in which *one face* is recorded and the other in which *two faces* are recorded. This scenario will help us to study the phenomenon of quantum superposition where our die is locked in two states.
+
+![Screenshot from 2023-06-11 23-25-49](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/a7da78f8-dc4a-4347-9900-2122071ca258)![Screenshot from 2023-06-11 23-25-36](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/0d3e949d-4ed1-4773-a289-b26e83e6a3f5)
 
 
 *Constructing an Hilbert Space*
