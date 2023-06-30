@@ -50,52 +50,12 @@ This right here is the source of our theses, that and a lack of access to quantu
 
 For the purpose of this experiment, we are recording the *front face(s)* of the die, which the camera allows us to do due to the 180 degree view. In our experiment, a roll has two possible initial outcomes; one in which *one face* is recorded and the other in which *two faces* are recorded. This scenario will help us to study the phenomenon of quantum superposition where our die is locked in two states.
 
-![Screenshot from 2023-06-11 23-25-49](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/a7da78f8-dc4a-4347-9900-2122071ca258)![Screenshot from 2023-06-11 23-25-36](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/0d3e949d-4ed1-4773-a289-b26e83e6a3f5)
+![Screenshot from 2023-06-11 23-25-49](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/a7da78f8-dc4a-4347-9900-2122071ca258)
+
+![Screenshot from 2023-06-11 23-25-36](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/0d3e949d-4ed1-4773-a289-b26e83e6a3f5)
 
 
-*Constructing an Hilbert Space*
 
-In this case, we would represent the single face outcome as the state |1> and the double face outcome as the state |2>. 
-
-The initial state of the system would be a superposition of these two states:
-
-* |psi> = (1/sqrt(2)) * [|1> + |2>] ...... (i)
-
-Our measurement operator would be a 2x2 matrix, since there are only 2 possible outcomes. The matrix would be:
-
- * M = [[1, 0], [0, 1]] ...... (ii)
-
-To calculate the probability of obtaining each outcome, we can use the formula:
-
- * p_i = |<e_i|psi>|^2 ...... (iii)
-
-where e_i is the ith basis vector 
-
-and |<e_i|psi>|^2 is the squared magnitude of the inner product between e_i and |psi>.
-
-For this 2-state system, the basis vectors are |1> and |2>. So we can calculate the probabilities as:
-
- * p_1 = |<1|psi>|^2 = |(1/sqrt(2)) * <1|1> + <1|2>>|^2 = 1/2 ...... (iv)
- * p_2 = |<2|psi>|^2 = |(1/sqrt(2)) * <2|1> + <2|2>>|^2 = 1/2 ...... (v)
-
-The probabilities of obtaining a single face or a double face are both 1/2, which is expected since the initial state is a superposition of these two states with equal weight.
-
-We can think of the 6 faces of the die as corresponding to 6 possible spin directions in a quantum system. In this case, the spin of the die would be analogous to the spin of a quantum particle, and the measurement of the face of the die would be analogous to the measurement of the spin of a quantum particle along a certain direction.
-
-We can represent the spin states using the Dirac notation, where |0⟩ represents spin up and |1⟩ represents spin down. Then, we can assign each face of the die to a corresponding spin state:
-
-    Face 1: |0⟩
-    Face 2: |1⟩
-    Face 3: |+⟩ = (|0⟩ + |1⟩)/sqrt(2)
-    Face 4: |−⟩ = (|0⟩ − |1⟩)/sqrt(2)
-    Face 5: |i⟩ = (|0⟩ + i|1⟩)/sqrt(2)
-    Face 6: |-i⟩ = (|0⟩ − i|1⟩)/sqrt(2)
-
-Here, |+⟩ and |−⟩ correspond to the spin states that are superpositions of spin up and spin down, while |i⟩ and |-i⟩ correspond to the spin states that are superpositions of spin up and spin down with an imaginary coefficient.
-
-We can then use these spin states to define our quantum system and perform measurements on it. For example, we could prepare the system in a superposition of spin up and spin down, and then measure the spin along a certain direction to obtain a probabilistic outcome. The probabilities of obtaining each outcome would depend on the initial state of the system and the measurement direction.
-
-By using the faces of the die as spin states, we can connect the concepts of classical probability and quantum mechanics, and explore the similarities and differences between them.
 
 ### RESULTS AND DISCUSSION
 
@@ -113,12 +73,12 @@ By using the faces of the die as spin states, we can connect the concepts of cla
 
 Calculating the probabilities of each outcome for a single face using the formula P(i) = count(i)/total count of single faces:
 
-    P(1) = 34/207 ≈ 0.1643
-    P(2) = 40/207 ≈ 0.1932
-    P(3) = 39/207 ≈ 0.1884
-    P(4) = 29/207 ≈ 0.1401
-    P(5) = 29/207 ≈ 0.1401
-    P(6) = 38/207 ≈ 0.1836
+    P(1) = 34/360 ≈ 0.0944
+    P(2) = 40/360 ≈ 0.1111
+    P(3) = 39/360 ≈ 0.1083
+    P(4) = 29/360 ≈ 0.0805
+    P(5) = 29/360 ≈ 0.0805
+    P(6) = 38/360 ≈ 0.1055
     
 We can use this P(x) value to construct the diagonal matrix D:
 
@@ -131,7 +91,7 @@ We can use this P(x) value to construct the diagonal matrix D:
 
 
 * total count of double faces: 153
-* number of possible outcomes that can appear on a double faces: 12
+* number of possible outcomes that can appear on double faces: 12
 * count for the possible combination that appeared:
     
       (1,2) = 13
@@ -146,6 +106,20 @@ We can use this P(x) value to construct the diagonal matrix D:
       (4,5) = 14
       (4,6) = 9
       (5,6) = 21
+
+      
+      (1,2) = 0.0361
+      (1,3) = 0.0583
+      (1,4) = 0.0417
+      (1,5) = 0.0305
+      (2,3) = 0.0250
+      (2,4) = 0.0333
+      (2,6) = 0.0277
+      (3,5) = 0.0083
+      (3,6) = 0.0416
+      (4,5) = 0.0388
+      (4,6) = 0.0250
+      (5,6) = 0.0583
     
 We can use this P(x) value to construct the diagonal matrix M:
 
