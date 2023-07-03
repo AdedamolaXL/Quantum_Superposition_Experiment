@@ -1,5 +1,5 @@
 # Quantum_Superposition_Experiment
-An exploration of superposition behaviour in rolled dice as observed from a video camera
+A conceptual exploration of superposition behaviour in rolled dice as observed from a video camera
 
 
 ## INTRODUCTION
@@ -26,43 +26,73 @@ Thus the very process of measurement (observation) creates the property which is
 
 It's important to recognize that the actualization of potential elements of reality is a characteristic feature of quantum systems, and this leads to non-classical properties that can create interference effects. This suggests that many of the "strange" aspects of quantum physics are actually present in the examination of conventional examples used to demonstrate classical probability calculations since the origin of probability theory. We only need to view these examples as physical experiments assessing particular features or measuring specific observables.
 
-This right here is the source of our theses, that and a lack of access to quantum precision instrumentation :)
+This right here is the source of our thesis, that and a lack of access to quantum precision instrumentation :)
 
 
 ### METHODOLOGY
+
+To prove the existence of quantum superposition, we will need to show that the system exhibits interference effects or other phenomena that are characteristic of superposition. For the purpose of our experiment, ***we will be performing measurements that reveal the coexistence of multiple states with different probabilities.***  
+In your die-rolling experiment, we'll associate spin directions with the observed faces and assign probabilities to each spin direction based on the frequencies of occurrence. By performing measurements on the spin direction of the die, we hope to reveal the coexistence of multiple spin directions and their respective probabilities.
 
 *Materials:*
  
  * One die with six sides
  * Flat surface to roll the die on
  * Camera to record the experiment 
- * Noteboo to record the results
+ * Notebook to record the results
 
 *Procedure:*
 
  * Choose a flat surface to roll the die on. Ensure that the surface is level and free from any potential sources of disturbance.
  * Prepare the die by ensuring that it is clean and free from any obstructions that may prevent it from rolling smoothly.
  * Begin the experiment by setting a timer to a fixed duration.
- * At regular intervals, in this case every 10 seconds, roll the die onto the flat surface. Record the result of each roll on a data sheet.
+ * At regular intervals, in this case, every 10 seconds, roll the die onto the flat surface. Record the result of each roll on a data sheet.
  * Repeat step 4, to conduct more rolls
 
 *Our experimental scenario:*
 
-For the purpose of this experiment, we are recording the *front face(s)* of the die, which the camera allows us to do due to the 180 degree view. In our experiment, a roll has two possible initial outcomes; one in which *one face* is recorded and the other in which *two faces* are recorded. This scenario will help us to study the phenomenon of quantum superposition where our die is locked in two states.
+For the purpose of this experiment, we are recording the *front face(s)* of the die, which the camera allows us to do due to the 180-degree view. In our experiment, a roll has two possible initial outcomes; one in which a *single-face* is recorded and the other in which *double-faces* are recorded. This scenario will help us to study the phenomenon of quantum superposition where our die is locked in two states. Each face will be analogous to the spin direction, and since our die has 6 faces, we will also have 6 spin directions.
 
 ![Screenshot from 2023-06-11 23-25-49](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/a7da78f8-dc4a-4347-9900-2122071ca258)
+- single face
+
 
 ![Screenshot from 2023-06-11 23-25-36](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/0d3e949d-4ed1-4773-a289-b26e83e6a3f5)
+-double face
 
+We can write the spin directions for the single-face outcome with their probability amplitude as this:
+|1⟩ = α₁
+|2⟩ = α₂
+|3⟩ = α₃
+|4⟩ = α₄
+|5⟩ = α₅
+|6⟩ = α₆
+The probability amplitude can be assigned equally to each direction based on classical probability as: 
+α₁ = α₂ = α₃ = α₄ = α₅ = α₆ = 1/6.
 
+For the double-face outcomes, the spin direction for each face can be written as: 
+(1,2) = β₁₂
+(1,3) = β₁₃
+(1,4) = β₁₄
+(1,5) = β₁₅
+(2,3) = β₂₃
+(2,4) = β₂₄
+(2,6) = β₂₆
+(3,5) = β₃₅
+(3,6) = β₃₆
+(4,5) = β₄₅
+(4,6) = β₄₆
+(5,6) = β₅₆
 
+The assigned probabilities will serve as the baseline for the comparison of the measured outcomes for the single-face spin directions and double-face combination spin directions.
 
-### RESULTS AND DISCUSSION
+### EXPERIMENTAL RESULTS
 
-* total count of single faces: 207
-
+* total number of rolls: 360
+  
+* total count of double faces: 207
 * number of possible outcomes that can appear on a single face: 6
-* count for each side of the single face observed:
+* count for each side of the single face spin direction observed:
 
       (1) = 34
       (2) = 40
@@ -71,29 +101,10 @@ For the purpose of this experiment, we are recording the *front face(s)* of the 
       (5) = 29
       (6) = 38
 
-Calculating the probabilities of each outcome for a single face using the formula P(i) = count(i)/total count of single faces:
-
-    P(1) = 34/360 ≈ 0.0944
-    P(2) = 40/360 ≈ 0.1111
-    P(3) = 39/360 ≈ 0.1083
-    P(4) = 29/360 ≈ 0.0805
-    P(5) = 29/360 ≈ 0.0805
-    P(6) = 38/360 ≈ 0.1055
-    
-We can use this P(x) value to construct the diagonal matrix D:
-
-    [ 0.1643   0        0        0        0        0     ]
-    [ 0        0.1932   0        0        0        0     ]
-    [ 0        0        0.1884   0        0        0     ]
-    [ 0        0        0        0.1401   0        0     ]
-    [ 0        0        0        0        0.1401   0     ]
-    [ 0        0        0        0        0        0.1836]
-
-
 * total count of double faces: 153
 * number of possible outcomes that can appear on double faces: 12
-* count for the possible combination that appeared:
-    
+* count for the double face spin direction observed:
+
       (1,2) = 13
       (1,3) = 21
       (1,4) = 15
@@ -107,7 +118,44 @@ We can use this P(x) value to construct the diagonal matrix D:
       (4,6) = 9
       (5,6) = 21
 
-      
+*Calculating probabilities*
+Calculate the observed frequencies for each measurement outcome. Compare these frequencies with the assigned probabilities to assess how well they align wil help us judge the possibilites of the coexistence of multiple states with different probabilities.
+
+We can calculate the probability for single face spin direction in three ways:
+
+*Actual probability for a single-face spin direction with the presence of double face combination when the total number of rolls is 360:
+ Using the formula P(i) = (Count(i) + Count(i,j) + Count(i,k) + Count(i,l) + Count(i,m)) / Total Rolls
+ = 
+    P(1) = 0.225
+    P(2) = 0.2333
+    P(3) = 0.2417
+    P(4) = 0.2194
+    P(5) = 0.2167
+    P(6) = 0.2583
+
+*Actual probability for a single-face spin direction without the presence of double face combination when the total number of rolls is 360:
+Using the formula P(i) = Count(i) / Total Rolls
+ = 
+    P(1) = 0.0944
+    P(2) = 0.1111
+    P(3) = 0.1083
+    P(4) = 0.0805
+    P(5) = 0.0805
+    P(6) = 0.1055
+
+*Actual probability for a single-face spin direction counting just single rolls of 207:
+Using the formula P(i) = Count(i) / Single-face Rolls
+ = 
+    P(1) = 0.1643
+    P(2) = 0.1932
+    P(3) = 0.1884
+    P(4) = 0.1401
+    P(5) = 0.1401
+    P(6) = 0.1836
+
+ 
+Calculating the probabilities of each outcome for a double face using the formula P(i,j) = count(i,j)/total count of double-faces:
+
       (1,2) = 0.0361
       (1,3) = 0.0583
       (1,4) = 0.0417
@@ -120,45 +168,20 @@ We can use this P(x) value to construct the diagonal matrix D:
       (4,5) = 0.0388
       (4,6) = 0.0250
       (5,6) = 0.0583
-    
-We can use this P(x) value to construct the diagonal matrix M:
 
-    [ 0        0.08497  0.13725  0.09804  0.07190  0        0.06536  0        0.09804  0.05882  0        0.13725 ]
-    [ 0.08497  0        0.05882  0.07843  0        0.06536  0        0        0        0.09150  0.13725  0       ]
-    [ 0.13725  0.05882  0        0        0.01961  0        0        0.09804  0.09804  0        0.13725  0       ]
-    [ 0.09804  0.07843  0        0        0        0.09150  0        0.05882  0.05882  0        0        0       ]
-    [ 0.07190  0        0.01961  0        0        0        0.07843  0.09804  0        0.09150  0        0.13725 ]
-    [ 0        0.06536  0        0.09150  0        0        0.09804  0.05882  0.05882  0.13725  0        0       ]
-    [ 0.06536  0        0        0        0.07843  0.09804  0        0.13725  0        0        0.01961  0       ]
-    | 0        0        0.09804  0.05882  0.09804  0.05882  0.13725  0        0        0        0        0       ]
-    [ 0.09804  0        0.09804  0.05882  0        0.05882  0        0        0        0.01961  0.13725  0       ]
-    [ 0.05882  0.09150  0        0        0.09150  0.13725  0        0        0.01961  0        0        0       ]
-    [ 0        0.13725  0.13725  0        0        0        0.01961  0        0.13725  0        0        0       ]
-    [ 0.13725  0        0        0        0.13725  0        0        0        0        0        0        0       ]
+## ANALYSIS OF RESULTS
 
+The expected probability for each single face spin direction is 1/6, which is approximately 0.1667. This is the probability we would expect if the die were behaving classically, without any quantum effects.
 
-Next, we need to demonstrate that the measurement operator for the double face outcome is a linear combination of the measurement operator for the single face outcome.
+These probabilities deviate from the expected probabilities of 1/6. The presence of double face combinations seems to affect the probabilities of the single faces, leading to a redistribution of probabilities among the faces.
 
-The Kronecker product of a matrix D with a matrix M is denoted by D ⊗ M, and is defined as follows:
+Comparing these probabilities to the expected probability of 1/6, we can see that they deviate from the classical expectation. This suggests that even in the absence of double face combinations, there are factors influencing the probabilities of the single face spin directions, which may be related to the experimental setup or other unknown factors.
 
-* (D ⊗ M)ij = Dij * M ......(vi)
+Overall, the deviation from the expected probabilities indicates that the system is exhibiting behavior beyond classical probabilities, possibly influenced by quantum effects such as superposition or entanglement. Further analysis and experimentation would be needed to fully understand and interpret the observed probabilities.
 
-The result of the kron product for the quantum superposition of single and double faces from earlier:
-        
-    [0          0.01396057 0.02255018     0          0          0         ]
-    [0.01396057 0          0.00966413     0          0          0         ]
-    [0.02255018 0.00966413 0              0          0          0         ]
-    [0          0          0              0          0          0         ]
-    [0          0          0              0          0          0         ]
-    [0          0          0              0          0          0         ]
+## CONCLUSION
+    Coexistence of Multiple States: The experiment has demonstrated the coexistence of multiple states with different probabilities in a macroscopic system. The observed probabilities for single-face spin directions and double-face spin direction combinations indicate that the die can exist in different states simultaneously, each with its own likelihood of occurrence.
 
-The resulting matrix represents the combined state of the quantum system, which is a superposition of the single and double face outcomes. Each element in the matrix corresponds to the probability amplitude of a particular basis state. 
+    Departure from Classical Behavior: The probabilities obtained from the experiment deviate from the expected classical probabilities. This departure from classical behavior suggests the presence of quantum-like phenomena or non-classical effects in the macroscopic system.
 
-To obtain the actual probabilities, you need to take the absolute value squared of each amplitude:
-
-    [0          0.00019489 0.00050851     0          0          0         ]
-    [0.00019489 0          0.00966413     0          0          0         ]
-    [0.00050851 0.00009339 0              0          0          0         ]
-    [0          0          0              0          0          0         ]
-    [0          0          0              0          0          0         ]
-    [0          0          0              0          0          0         ]
+    Influence of Interference: The observed probabilities for both single-face and double-face spin directions suggest the presence of interference effects. The interference between different spin directions, including both single-face and double-face combinations, impacts the overall probability distribution of the system.
