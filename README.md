@@ -123,9 +123,9 @@ Calculate the observed frequencies for each measurement outcome. Compare these f
 
 We can calculate the probability for single face spin direction in three ways:
 
-#### Actual probability for a single-face spin direction with the presence of double face combination when the total number of rolls is 360:
-Using the formula P(i) = (Count(i) + Count(i,j) + Count(i,k) + Count(i,l) + Count(i,m)) / Total Rolls
- = 
+#### Actual probability for a single-face spin direction with the presence of double face combination when the total number of rolls is 360: Using the formula P(i) = (Count(i) + Count(i,j) + Count(i,k) + Count(i,l) + Count(i,m)) / Total Rolls
+= 
+    
     P(1) = 0.225
     P(2) = 0.2333
     P(3) = 0.2417
