@@ -58,7 +58,7 @@ For the purpose of this experiment, we are recording the *front face(s)* of the 
 
 
 ![Screenshot from 2023-06-11 23-25-36](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/0d3e949d-4ed1-4773-a289-b26e83e6a3f5)
--double face
+- double face
 
 We can write the spin directions for the single-face outcome with their probability amplitude as this:
 |1⟩ = α₁
@@ -123,7 +123,7 @@ Calculate the observed frequencies for each measurement outcome. Compare these f
 
 We can calculate the probability for single face spin direction in three ways:
 
-*Actual probability for a single-face spin direction with the presence of double face combination when the total number of rolls is 360:
+***Actual probability for a single-face spin direction with the presence of double face combination when the total number of rolls is 360:***
  Using the formula P(i) = (Count(i) + Count(i,j) + Count(i,k) + Count(i,l) + Count(i,m)) / Total Rolls
  = 
     P(1) = 0.225
@@ -133,7 +133,7 @@ We can calculate the probability for single face spin direction in three ways:
     P(5) = 0.2167
     P(6) = 0.2583
 
-*Actual probability for a single-face spin direction without the presence of double face combination when the total number of rolls is 360:
+***Actual probability for a single-face spin direction without the presence of double face combination when the total number of rolls is 360:***
 Using the formula P(i) = Count(i) / Total Rolls
  = 
     P(1) = 0.0944
@@ -143,7 +143,7 @@ Using the formula P(i) = Count(i) / Total Rolls
     P(5) = 0.0805
     P(6) = 0.1055
 
-*Actual probability for a single-face spin direction counting just single rolls of 207:
+***Actual probability for a single-face spin direction counting just single rolls of 207:***
 Using the formula P(i) = Count(i) / Single-face Rolls
  = 
     P(1) = 0.1643
@@ -180,8 +180,7 @@ Comparing these probabilities to the expected probability of 1/6, we can see tha
 Overall, the deviation from the expected probabilities indicates that the system is exhibiting behavior beyond classical probabilities, possibly influenced by quantum effects such as superposition or entanglement. Further analysis and experimentation would be needed to fully understand and interpret the observed probabilities.
 
 ## CONCLUSION
-    Coexistence of Multiple States: The experiment has demonstrated the coexistence of multiple states with different probabilities in a macroscopic system. The observed probabilities for single-face spin directions and double-face spin direction combinations indicate that the die can exist in different states simultaneously, each with its own likelihood of occurrence.
+* Coexistence of Multiple States: The experiment has demonstrated the coexistence of multiple states with different probabilities in a macroscopic system. The observed probabilities for single-face spin directions and double-face spin direction combinations indicate that the die can exist in different states simultaneously, each with its own likelihood of occurrence.
+* Departure from Classical Behavior: The probabilities obtained from the experiment deviate from the expected classical probabilities. This departure from classical behavior suggests the presence of quantum-like phenomena or non-classical effects in the macroscopic system.
 
-    Departure from Classical Behavior: The probabilities obtained from the experiment deviate from the expected classical probabilities. This departure from classical behavior suggests the presence of quantum-like phenomena or non-classical effects in the macroscopic system.
-
-    Influence of Interference: The observed probabilities for both single-face and double-face spin directions suggest the presence of interference effects. The interference between different spin directions, including both single-face and double-face combinations, impacts the overall probability distribution of the system.
+* Influence of Interference: The observed probabilities for both single-face and double-face spin directions suggest the presence of interference effects. The interference between different spin directions, including both single-face and double-face combinations, impacts the overall probability distribution of the system.
