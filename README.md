@@ -145,7 +145,7 @@ Using the formula P(i) = Count(i) / Total Rolls
 
 Actual probability for a single-face spin direction counting just single rolls of 207:
 Using the formula P(i) = Count(i) / Single-face Rolls
- = 
+
     P(1) = 0.1643
     P(2) = 0.1932
     P(3) = 0.1884
