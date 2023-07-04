@@ -40,6 +40,7 @@ In your die-rolling experiment, we'll associate spin directions with the observe
  * Flat surface to roll the die on
  * Camera to record the experiment 
  * Notebook to record the results
+ * Jupyter notebook for data processing
 
 *Procedure:*
 
@@ -61,28 +62,31 @@ For the purpose of this experiment, we are recording the *front face(s)* of the 
 - double face
 
 We can write the spin directions for the single-face outcome with their probability amplitude as this:
-|1⟩ = α₁
-|2⟩ = α₂
-|3⟩ = α₃
-|4⟩ = α₄
-|5⟩ = α₅
-|6⟩ = α₆
-The probability amplitude can be assigned equally to each direction based on classical probability as: 
-α₁ = α₂ = α₃ = α₄ = α₅ = α₆ = 1/6.
+          
+    |1⟩ = α₁
+    |2⟩ = α₂
+    |3⟩ = α₃
+    |4⟩ = α₄
+    |5⟩ = α₅
+    |6⟩ = α₆
 
 For the double-face outcomes, the spin direction for each face can be written as: 
-(1,2) = β₁₂
-(1,3) = β₁₃
-(1,4) = β₁₄
-(1,5) = β₁₅
-(2,3) = β₂₃
-(2,4) = β₂₄
-(2,6) = β₂₆
-(3,5) = β₃₅
-(3,6) = β₃₆
-(4,5) = β₄₅
-(4,6) = β₄₆
-(5,6) = β₅₆
+   
+    (1,2) = β₁₂
+    (1,3) = β₁₃
+    (1,4) = β₁₄
+    (1,5) = β₁₅
+    (2,3) = β₂₃
+    (2,4) = β₂₄
+    (2,6) = β₂₆
+    (3,5) = β₃₅
+    (3,6) = β₃₆
+    (4,5) = β₄₅
+    (4,6) = β₄₆
+    (5,6) = β₅₆
+
+The probability amplitude can be assigned equally to each single-face spin direction based on classical probability as: 
+α₁ = α₂ = α₃ = α₄ = α₅ = α₆ = 1/6.
 
 The assigned probabilities will serve as the baseline for the comparison of the measured outcomes for the single-face spin directions and double-face combination spin directions.
 
@@ -92,7 +96,7 @@ The assigned probabilities will serve as the baseline for the comparison of the 
   
 * total count of double faces: 207
 * number of possible outcomes that can appear on a single face: 6
-* count for each side of the single face spin direction observed:
+* count for each side of the single-face spin direction observed:
 
       (1) = 34
       (2) = 40
@@ -119,9 +123,9 @@ The assigned probabilities will serve as the baseline for the comparison of the 
       (5,6) = 21
 
 *Calculating probabilities*
-Calculate the observed frequencies for each measurement outcome. Compare these frequencies with the assigned probabilities to assess how well they align wil help us judge the possibilites of the coexistence of multiple states with different probabilities.
+Calculate the observed frequencies for each measurement outcome. Comparing these frequencies with the assigned probabilities to assess how well they align will help us judge the possibilities of the coexistence of multiple states with different probabilities.
 
-We can calculate the probability for single face spin direction in three ways:
+We can calculate the probability for single-face spin direction in three ways:
 
 Actual probability for a single-face spin direction with the presence of double face combination when the total number of rolls is 360: 
 Using the formula P(i) = (Count(i) + Count(i,j) + Count(i,k) + Count(i,l) + Count(i,m)) / Total Rolls
@@ -133,13 +137,13 @@ Using the formula P(i) = (Count(i) + Count(i,j) + Count(i,k) + Count(i,l) + Coun
     P(5) = 0.2167
     P(6) = 0.2583
 
-Actual probability for a single-face spin direction without the presence of double face combination when the total number of rolls is 360:
+Actual probability for a single-face spin direction without the presence of a double-face combination when the total number of rolls is 360:
 Using the formula P(i) = Count(i) / Total Rolls
 
     P(1) = 0.0944
     P(2) = 0.1111
     P(3) = 0.1083
-    P(4) = 0.0805
+    P(4) = 0.1083
     P(5) = 0.0805
     P(6) = 0.1055
 
@@ -154,7 +158,7 @@ Using the formula P(i) = Count(i) / Single-face Rolls
     P(6) = 0.1836
 
  
-Calculating the probabilities of each outcome for a double face using the formula P(i,j) = count(i,j)/total count of double-faces:
+Calculating the probabilities of each outcome for a double face using the formula P(i,j) = count(i,j)/total number of rolls
 
       (1,2) = 0.0361
       (1,3) = 0.0583
@@ -169,18 +173,58 @@ Calculating the probabilities of each outcome for a double face using the formul
       (4,6) = 0.0250
       (5,6) = 0.0583
 
-## ANALYSIS OF RESULTS
+## DATA ANALYSIS AND VISUALIZATION
 
-The expected probability for each single face spin direction is 1/6, which is approximately 0.1667. This is the probability we would expect if the die were behaving classically, without any quantum effects.
+1. The expected probability for each single-face spin direction is 1/6, which is approximately 0.1667. This is the probability we would expect if the die were behaving classically, without any quantum effects.
+  
+2. Actual Probability for Single Faces with the Presence of Double-Face Combination: When considering both the single-face spin directions and the double-face spin direction combinations, the actual probabilities for the single faces are different from the expected probabilities. This suggests that the presence of double-face combinations has influenced the probabilities of observing each single face.
+  
+![withdoublec](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/02bd7bee-3296-4a49-b6e6-dd23c626df43)
 
-These probabilities deviate from the expected probabilities of 1/6. The presence of double face combinations seems to affect the probabilities of the single faces, leading to a redistribution of probabilities among the faces.
+Given that these probabilities cluster consistently above the diagonal line, it indicates that  the actual probabilities for spin directions involving double face combinations are consistently higher than the expected probabilities. 
 
-Comparing these probabilities to the expected probability of 1/6, we can see that they deviate from the classical expectation. This suggests that even in the absence of double face combinations, there are factors influencing the probabilities of the single face spin directions, which may be related to the experimental setup or other unknown factors.
+3. Actual Probability for Single Faces without the Presence of Double-Face Combination: This becomes more obvious when considering the single-face spin directions and excluding the double-face combinations, the actual probabilities for the single faces are closer to the expected probabilities.
 
-Overall, the deviation from the expected probabilities indicates that the system is exhibiting behavior beyond classical probabilities, possibly influenced by quantum effects such as superposition or entanglement. Further analysis and experimentation would be needed to fully understand and interpret the observed probabilities.
+![withoutdoublec](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/994229e6-db47-494b-b030-cfd7dae20c24)
+
+The data points here cluster consistently below the diagonal line. This suggests that the actual probabilities for spin directions not involving double face combinations are consistently lower than the expected probabilities. 
+
+5. Actual Probability for Single Faces considering just Single Rolls: This helps us validate this results comparison as it shows the closest expected behaviour you would expect from a die rolled under the principles of classical probability.
+
+![singleroll](https://github.com/AdedamolaXL/Quantum_Superposition_Experiment/assets/66562380/cfef7ed1-d8a1-43f0-90e5-a1ddc5f8d72e)
+
+The clustering of data points near the diagonal line indicates a higher level of consistency and agreement with the expected probabilities compared to the previous scenarios.
+
+*The observed deviations from the expected probabilities when double face combinations are present or absent indicate the influence of these combinations on the overall outcomes. Additionally, the closer alignment of data points to the diagonal line for single rolls suggests a convergence towards the expected classical probabilities.*
+
+*Moreover the vertical alignement of all data points showing a consistent pattern, suggests there is some underlying factors or mechanisms that influence the observed probabilities.
+
+## INTERPRETATION AND SYNTHESIS
+
+Main Statement: *The introduction of a double-face combination into the die-rolled observation introduced interferences suggesting non-classical behaviour. This behaviour was seen to progressively recorrect itself during analysis as the double-face combination where removed on two different levels. This suggests that whenever we roll a die: before it settles onto a single-face (which adheres to the familiar laws of classical probability), it exists in multiple possible states, joustling with each other for emergence. The double-face combination spin direction shows how this can occur in the die system and how  non-classical probabilistic behaviour ditto quantum behaviour occurs when the die exists in two states.*
+
+We make our statement based on the following observations:
+
+1. The Expected vs. Actual Probabilities: The comparison between the expected classical probabilities (1/6) and the actual probabilities for each single-face spin direction highlights the departure from classical behavior due to the presence of double-face combinations. The discrepancy suggests that the system is exhibiting non-classical probabilistic behavior, akin to quantum-like phenomena.
+
+2. Influence of Double-Face Combinations: The key observation is that the presence of double-face combinations affects the probabilities of observing each single face. This influence suggests that the system is undergoing quantum-like interference, where the outcomes of one measurement (double-face combination) are influencing the probabilities of another measurement (single-face spin direction).
+
+3. Convergence to Classical Behavior: The gradual convergence of the actual probabilities to the expected probabilities when excluding the double-face combinations further supports the idea that the system is transitioning from non-classical to classical behavior as the influence of the double-face combinations is removed. This is consistent with the concept of decoherence in quantum mechanics, where quantum systems lose their coherence and behave classically when interacting with the environment.
+
+4. Single Rolls Validation: The comparison with the actual probabilities considering just single rolls validates the overall analysis. When observing single rolls, the probabilities align more closely with classical expectations, reinforcing the notion that the non-classical effects arise mainly from the double-face combinations.
+
+5. Significance of Quantum-Like Behavior: The observed quantum-like behavior in a macroscopic system like a die experiment is noteworthy. It demonstrates that under certain conditions, macroscopic systems can exhibit probabilistic behavior reminiscent of quantum mechanics. This finding is in line with the broader field of quantum biology and quantum cognition, where quantum principles have been proposed to play a role in biological systems and decision-making processes.
+
 
 ## CONCLUSION
+
+In conclusion we have come to a new understanding of the following:
+
 * Coexistence of Multiple States: The experiment has demonstrated the coexistence of multiple states with different probabilities in a macroscopic system. The observed probabilities for single-face spin directions and double-face spin direction combinations indicate that the die can exist in different states simultaneously, each with its own likelihood of occurrence.
-* Departure from Classical Behavior: The probabilities obtained from the experiment deviate from the expected classical probabilities. This departure from classical behavior suggests the presence of quantum-like phenomena or non-classical effects in the macroscopic system.
+ 
+* Departure from Classical Behavior: The probabilities obtained from the experiment deviate from the expected classical probabilities. This departure from classical behaviour suggests the presence of quantum-like phenomena or non-classical effects in the macroscopic system.
 
 * Influence of Interference: The observed probabilities for both single-face and double-face spin directions suggest the presence of interference effects. The interference between different spin directions, including both single-face and double-face combinations, impacts the overall probability distribution of the system.
+
+* Theoretical Implications: While our experimental data shows intriguing quantum-like behavior, the absence of a theoretical basis for the assigned probability amplitudes (βij) for the double-face combinations currently limits the ability to fully interpret the observed phenomena. However, this significant point serves as a compelling foundation for further research and theoretical exploration Which can inspire the development of new theoretical models that can explain the observed quantum-like behavior in macroscopic systems.
+
